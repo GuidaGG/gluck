@@ -1,0 +1,45 @@
+body {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600; }
+  body #site-wrapper {
+    max-width: 1280px;
+    margin: 0 auto; }
+  body h1 {
+    font-size: 1em; }
+  body img {
+    width: 100%; }
+  body header {
+    font-size: 3em; }
+    body header li {
+      list-style-type: none; }
+      body header li a {
+        text-decoration: none;
+        color: black; }
+  body .section {
+    background: pink;
+    margin-bottom: 50px; }
+    body .section .section_content .events_container {
+      background: blue; }
+      body .section .section_content .events_container .event {
+        display: inline-block;
+        width: 20%;
+        border: solid black 1px;
+        margin: 20px; }
+    body .section .section_content .section_image_texts .twenty {
+      width: 30%; }
+    body .section .section_content .section_image_texts .thirty {
+      width: 30%; }
+    body .section .section_content .section_image_texts .forty {
+      width: 40%; }
+    body .section .section_content .section_image_texts .fifty {
+      width: 50%; }
+    body .section .section_content .section_image_texts .sixty {
+      width: 60%; }
+    body .section .section_content .section_image_texts .eighty {
+      width: 80%; }
+    body .section .section_content .section_image_texts .full {
+      width: 100%; }
+    body .section .section_content .section_image_texts .image_text {
+      display: inline-block; }
+
+/*# sourceMappingURL=style.css.map */

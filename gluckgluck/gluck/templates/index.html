@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load random_class %}
+
+{% block content %}  
+
+    {% for sect in section_titles%}
+    <section class="section" id="section_{{ sect.section_title}}">
+        <h2>
+        {{ sect.section_title | safe | linebreaks }}
+        </h2>
+        <div class="section_content">
+        {% if sect.section_title == "Veranstaltungen" %}
+        <div class="events_container">
+            {% for year in years%}
+            <h3> {{year.Year}} </h3>
+                {% for event in events%}
+                {% if event.get_year == year.Year %}
+                <div class="event">
+      
+                <p>{{event.title}}</p>
+                <p>{{event.subtitle}}</p>
+                <p>{{event.date}}</p>
+                <p>{{event.time}}</p>
+                <p>{{event.price}}</p>
+                </div>
+                {% endif %}
+            {% endfor %}
+            {% endfor %}
+        </div> 
+        {% endif%}
+        <div class="section_image_texts">
+        {% for section in sections %}
+            {% if  section.section_fk.section_title == sect.section_title  %}
+                {% if section.text  %}
+                    <div class="image_text {% random_class  %}">
+                    {{ section.text  | safe | linebreaks }}
+                    </div>
+                {% endif %}
+                {% if section.image  %}
+                    <div class="image_text {% random_class  %} ">
+                    <img src="{{ section.image.url}} ">
+                    </div>
+                {% endif %}
+            {% endif  %}
+        {% endfor %}
+        </div>
+    {% if sect.section_title == "Aktuelles" %}
+        <div class="next_event">
+        Nächster Termin
+        {% with events|first as e %}
+         {{e.title}}  
+        {% endwith %}
+        </div>
+    {% endif%}
+    <p></p>
+        </div>
+    </section>
+    {% endfor %}
+    
+   
+{% endblock content %}

@@ -1,0 +1,104 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif; }
+
+#header {
+  background-color: white;
+  border-bottom: solid 1px black; }
+  #header #branding {
+    color: black; }
+    #header #branding h1 {
+      color: black; }
+      #header #branding h1 a:link {
+        color: black !important;
+        font-size: 28px; }
+    #header #branding a {
+      color: black; }
+  #header #user-tools {
+    font-size: 14px; }
+    #header #user-tools a:hover {
+      border: none; }
+
+a:link, a:visited {
+  color: black !important; }
+
+a:hover {
+  color: grey !important; }
+
+div.app-auth caption {
+  display: none; }
+
+div.breadcrumbs, .module caption {
+  font-size: 14px;
+  color: black;
+  background-color: white;
+  background: white;
+  border-bottom: solid 1px black;
+  padding: 10px; }
+  div.breadcrumbs table th, .module caption table th {
+    font-size: 18px;
+    padding: 10px; }
+
+div.breadcrumbs {
+  padding-left: 40px; }
+
+.addlink, .changelink {
+  background: none; }
+
+#content-related {
+  background: white;
+  border: solid black 1px;
+  color: black; }
+
+#content-related .actionlist li {
+  padding-left: 0px; }
+
+thead th, .inline-group h2 {
+  background: white;
+  color: black;
+  border: none;
+  border-bottom: black solid 1px; }
+
+#content #changelist .actions select, input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="number"], input[type="tel"], textarea, select, .vTextField {
+  border-radius: 0px;
+  padding: 5px; }
+
+.field-order {
+  width: 50px; }
+  .field-order input {
+    width: 30px; }
+
+.field-section_title textarea {
+  height: 48px; }
+
+#content .inline-group div.add-row, #content .inline-group .tabular tr.add-row td {
+  background: white !important; }
+
+td, th {
+  padding: 20px;
+  padding-left: 5px;
+  font-weight: 500; }
+
+textarea:focus, input:focus {
+  outline: none; }
+
+*:focus {
+  outline: none; }
+
+.object-tools a {
+  border-radius: 0px; }
+
+.row2 {
+  background: white; }
+
+div.submit-row {
+  background: white;
+  border-color: black;
+  border-radius: 0px; }
+  div.submit-row a.deletelink, div.submit-row input, div.submit-row .default {
+    border-radius: 0px;
+    background: white;
+    border: solid black 1px;
+    color: black;
+    text-transform: uppercase; }
+
+/*# sourceMappingURL=admin-extra.css.map */
