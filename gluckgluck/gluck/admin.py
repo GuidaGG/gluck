@@ -17,7 +17,7 @@ class ImageInline(admin.TabularInline):
     model = Image
     extra = 0
     min_num = 0
-    fields = ['order', 'image', 'image_tag']
+    fields = ['order','size', 'image', 'image_tag']
     readonly_fields = ['image_tag']
 
 

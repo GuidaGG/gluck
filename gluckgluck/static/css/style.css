@@ -1,45 +1,211 @@
+@font-face {
+  font-family: "DiaBold";
+  src: url("../fonts/Dia Bold.eot");
+  src: url("../fonts/Dia Bold.woff") format("woff"); }
+
 body {
-  font-family: 'Playfair Display', serif;
+  margin: 0px;
+  font-family: 'DiaBold', sans-serif;
+  overflow-x: hidden;
   font-weight: 600; }
+  body #space {
+    content: "";
+    background: white;
+    height: 53vh; }
+  body #header-banner {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    background: white;
+    z-index: 200;
+    height: 100vh;
+    width: 100%;
+    padding-top: 10vh;
+    overflow: hidden;
+    font-size: 20px;
+    line-height: 24px; }
+    body #header-banner .right_gluck {
+      position: relative;
+      float: right;
+      width: 55%;
+      margin-left: 40%; }
+      body #header-banner .right_gluck .address {
+        position: absolute;
+        bottom: -120px;
+        left: 55%;
+        transform: translateX(-50%); }
+    body #header-banner .left_gluck {
+      position: relative;
+      margin-top: -180px;
+      float: left;
+      width: 25%; }
+      body #header-banner .left_gluck .title {
+        max-width: 150px;
+        position: absolute;
+        right: -100px;
+        top: 20px; }
+    body #header-banner .opening, body #header-banner .closing {
+      position: absolute;
+      height: 200px;
+      width: 200px;
+      background-color: #C8ECE0;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 200px; }
+    body #header-banner .opening {
+      left: 0px;
+      bottom: 30px;
+      transform: translateY(50%); }
+    body #header-banner .closing {
+      left: 15%;
+      bottom: -280px; }
   body #site-wrapper {
     max-width: 1280px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: relative; }
   body h1 {
     font-size: 1em; }
   body img {
-    width: 100%; }
+    width: 100%;
+    height: auto; }
+  body .only_image {
+    position: relative;
+    max-height: 90vh !important; }
+  body p {
+    font-size: 1.4em;
+    max-width: 400px; }
   body header {
-    font-size: 3em; }
-    body header li {
-      list-style-type: none; }
-      body header li a {
-        text-decoration: none;
-        color: black; }
+    font-size: 3em;
+    padding: 20px;
+    list-style-type: none; }
+    body header a img {
+      width: 20%; }
   body .section {
-    background: pink;
-    margin-bottom: 50px; }
-    body .section .section_content .events_container {
-      background: blue; }
-      body .section .section_content .events_container .event {
+    margin-bottom: 50px;
+    position: relative; }
+    body .section .section_content {
+      position: relative;
+      overflow: visible; }
+      body .section .section_content .events_container {
+        background: blue; }
+        body .section .section_content .events_container .event {
+          display: inline-block;
+          width: 20%;
+          border: solid black 1px;
+          margin: 20px; }
+      body .section .section_content .section_image_texts img {
+        -webkit-transition: 1s ease-in-out;
+        -moz-transition: 1s ease-in-out;
+        -o-transition: 1s ease-in-out;
+        transition: 1s ease-in-out; }
+      body .section .section_content .section_image_texts img.is-visible {
+        opacity: 1; }
+      body .section .section_content .section_image_texts .twenty {
+        width: 20%; }
+      body .section .section_content .section_image_texts .thirty {
+        width: 30%; }
+      body .section .section_content .section_image_texts .forty {
+        width: 40%; }
+      body .section .section_content .section_image_texts .fifty {
+        width: 50%; }
+      body .section .section_content .section_image_texts .sixty {
+        width: 60%; }
+      body .section .section_content .section_image_texts .eighty {
+        width: 80%; }
+      body .section .section_content .section_image_texts .full {
+        width: 100%; }
+      body .section .section_content .section_image_texts .image_text, body .section .section_content .section_image_texts .only_image {
         display: inline-block;
-        width: 20%;
-        border: solid black 1px;
-        margin: 20px; }
-    body .section .section_content .section_image_texts .twenty {
-      width: 30%; }
-    body .section .section_content .section_image_texts .thirty {
-      width: 30%; }
-    body .section .section_content .section_image_texts .forty {
-      width: 40%; }
-    body .section .section_content .section_image_texts .fifty {
-      width: 50%; }
-    body .section .section_content .section_image_texts .sixty {
-      width: 60%; }
-    body .section .section_content .section_image_texts .eighty {
-      width: 80%; }
-    body .section .section_content .section_image_texts .full {
-      width: 100%; }
-    body .section .section_content .section_image_texts .image_text {
-      display: inline-block; }
+        padding: 20px; }
+      body .section .section_content .section_image_texts .left {
+        float: left; }
+      body .section .section_content .section_image_texts .right {
+        float: right; }
+      body .section .section_content .next_event {
+        background: red;
+        height: 300px;
+        left: auto; }
+    body .section .block {
+      content: "";
+      clear: both;
+      display: table; }
+  body #section_Weinhandel .only_image.left img {
+    /* position: absolute;
+            left:-1000px ; */
+    transform: scale(0.7);
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out; }
+  body #section_Weinhandel .only_image.right img {
+    /* position: absolute;
+            right:-1000px ; */
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+    transform: scale(0.7); }
+  body #section_Weinhandel .only_image.left img.is-visible {
+    /* position: relative;
+            left: 0px; */
+    transform: scale(1.2); }
+  body #section_Weinhandel .only_image.right img.is-visible {
+    /* position: relative;
+            right: 0px; */
+    transform: scale(1.2); }
+  body #section_Weinhandel .image_text img {
+    transform: scale(0.7); }
+  body #section_Weinhandel .image_text img.is-visible {
+    transform: scale(1.1); }
+  body #section_Aktuelles .only_image img {
+    /*  position: absolute;
+            right:-1000px ; */
+    transform: scale(0.8);
+    -webkit-transition: 0.8s ease-in-out;
+    -moz-transition: 0.8s ease-in-out;
+    -o-transition: 0.8s ease-in-out;
+    transition: 0.8s ease-in-out; }
+  body #section_Aktuelles .only_image img.is-visible {
+    /* position: relative;
+            right: 0px; */
+    transform: scale(1.1); }
+  body #section_Aktuelles .image_text img {
+    transform: scale(0.2); }
+  body #section_Aktuelles .image_text img.is-visible {
+    transform: scale(1); }
+  body #section_Sortiment .only_image {
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out; }
+  body #section_Sortiment .only_image.fifty img {
+    transform: scale(0); }
+  body #section_Sortiment .only_image.fifty img.is-visible {
+    transform: scale(1.4); }
+  body #section_Sortiment .only_image.forty img {
+    /* position: absolute;
+            left:-1000px ;
+            top: -200px; */
+    transform: scale(0.7); }
+  body #section_Sortiment .only_image.forty img.is-visible {
+    transform: scale(1); }
+  body #section_Sortiment .image_text img {
+    transform: scale(0.2); }
+  body #section_Sortiment .image_text img.is-visible {
+    transform: scale(1); }
+
+#section_Weinhandel {
+  vertical-align: top; }
+  #section_Weinhandel .only_image {
+    vertical-align: top; }
+  #section_Weinhandel .image_text {
+    vertical-align: top; }
+
+#section_Weinhandel {
+  vertical-align: top; }
+  #section_Weinhandel .only_image {
+    vertical-align: top; }
+  #section_Weinhandel .image_text {
+    vertical-align: top; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,9 +1,10 @@
-{% extends 'base.html' %}
+{% extends 'gluck/base.html' %}
 {% load random_class %}
 
 {% block content %}  
-
+  
     {% for sect in section_titles%}
+
     <section class="section" id="section_{{ sect.section_title}}">
         <h2>
         {{ sect.section_title | safe | linebreaks }}
@@ -30,14 +31,20 @@
         {% endif%}
         <div class="section_image_texts">
         {% for section in sections %}
+   
             {% if  section.section_fk.section_title == sect.section_title  %}
-                {% if section.text  %}
-                    <div class="image_text {% random_class  %}">
+                {% if section.text or section.imaget %}
+                
+                    <div class="image_text {% random_class %} ">
                     {{ section.text  | safe | linebreaks }}
+                     {% if section.imaget  %}
+                    <img src="{{ section.imaget.url}} ">
+                     {% endif %}
                     </div>
                 {% endif %}
                 {% if section.image  %}
-                    <div class="image_text {% random_class  %} ">
+                  
+                    <div class="only_image  {% random_class_images %} {% random_align  %}" >
                     <img src="{{ section.image.url}} ">
                     </div>
                 {% endif %}
@@ -54,6 +61,7 @@
     {% endif%}
     <p></p>
         </div>
+        <div class="block"></div>
     </section>
     {% endfor %}
     

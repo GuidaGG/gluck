@@ -37,7 +37,7 @@ def index(request):
         section_titles = Section.objects.filter(page__title="GluckGluck").select_related()
     except Section.DoesNotExist:
         raise Http404("Content does not exist")
-    return render(request, 'index.html', {'sections' : sections, 'events' : events, 'section_titles' : section_titles, 'years': years})
+    return render(request, 'gluck/index.html', {'sections' : sections, 'events' : events, 'section_titles' : section_titles, 'years': years})
 
 
 def impressum(request):
@@ -45,14 +45,14 @@ def impressum(request):
         sections = Section.objects.filter(page__title='Impressum')
     except Section.DoesNotExist:
         raise Http404("Content does not exist")
-    return render(request, 'functional.html', {'sections' : sections})
+    return render(request, 'gluck/functional.html', {'sections' : sections})
 
 def datenschutzerklarung(request):
     try:
         sections = Section.objects.filter(page__title='Datenschutzerklärung')
     except Section.DoesNotExist:
         raise Http404("Content does not exist")
-    return render(request, 'functional.html', {'sections' : sections})
+    return render(request, 'gluck/functional.html', {'sections' : sections})
 
 
 

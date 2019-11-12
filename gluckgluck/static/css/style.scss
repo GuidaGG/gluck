@@ -1,0 +1,273 @@
+body{
+    overflow-x: hidden;
+    #site-wrapper{
+        max-width: 1280px;
+        margin: 0 auto;
+        position:relative;
+    
+    }
+
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    h1{
+        font-size: 1em;
+    }
+  
+    img{
+        width: 100%;
+        height: auto;
+    
+    }
+    .only_image{
+        position: relative;
+       
+        max-height: 90vh !important;
+    }
+    p{
+ 
+        font-size:1.4em;
+        max-width: 400px;
+    }
+
+    header{
+        font-size: 3em;
+        li{
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                color: black;
+            
+            }
+        }
+     
+    }
+    
+    .section{
+      //  background: pink;
+        margin-bottom: 50px;
+        position: relative;
+        .section_content{
+            position: relative;
+            overflow: visible;
+        
+            .events_container{
+                background: blue;
+                .event{
+                  display: inline-block;
+                  width: 20%;
+                  border: solid black 1px;
+                  margin: 20px
+                }
+               
+                
+            }
+            .section_image_texts{
+                img{
+                    -webkit-transition: 1s ease-in-out;
+                    -moz-transition: 1s ease-in-out;
+                    -o-transition: 1s ease-in-out;
+                    transition: 1s ease-in-out;
+                }
+
+                img.is-visible {
+                    opacity: 1;
+                  //  transform: rotateZ(-2deg);
+                  }
+
+                
+                .twenty{
+                    width:20%
+                }
+
+                .thirty{
+                    width:30%
+                }
+                .forty{
+                    width:40%
+                }
+                .fifty{
+                    width:50%
+                }
+                .sixty{
+                    width:60%
+                }
+                .eighty{
+                    width:80%
+                }
+                .full{
+                    width:100%
+                }
+                .image_text, .only_image{
+                    display: inline-block;
+                    padding: 20px;
+                }
+                .left{
+                float:left
+                }
+                .right{
+                    float:right
+                }
+
+            }
+
+            .next_event{
+                background: red;
+                height: 300px;
+                left: auto;
+            }
+         
+        }
+  
+        .block{
+            content: "";
+  clear: both;
+  display: table;
+        }
+
+    }
+
+    //specific images
+
+              
+    #section_Weinhandel{
+        .only_image.left img{
+           /* position: absolute;
+            left:-1000px ; */
+            transform: scale(0.7);
+            -webkit-transition: 1s ease-in-out;
+            -moz-transition: 1s ease-in-out;
+            -o-transition: 1s ease-in-out;
+            transition: 1s ease-in-out;
+
+        }
+        .only_image.right img{
+           /* position: absolute;
+            right:-1000px ; */
+            -webkit-transition: 1s ease-in-out;
+            -moz-transition: 1s ease-in-out;
+            -o-transition: 1s ease-in-out;
+            transition: 1s ease-in-out;
+           transform: scale(0.7);
+
+        }
+
+        .only_image.left img.is-visible{
+           /* position: relative;
+            left: 0px; */
+            transform: scale(1.2);
+          }
+        .only_image.right img.is-visible{
+           /* position: relative;
+            right: 0px; */
+            transform: scale(1.2);
+          }
+
+        .image_text img{
+            transform: scale(0.7);
+        
+        }
+        .image_text img.is-visible{
+            transform: scale(1.1);
+           
+        }
+    }
+
+    #section_Aktuelles{
+        .only_image img{
+          /*  position: absolute;
+            right:-1000px ; */
+            transform: scale(0.8);
+    
+            -webkit-transition: 0.8s ease-in-out;
+            -moz-transition: 0.8s ease-in-out;
+            -o-transition: 0.8s ease-in-out;
+            transition: 0.8s ease-in-out;
+
+        }
+        .only_image img.is-visible{
+           /* position: relative;
+            right: 0px; */
+            transform: scale(1.1);
+    
+          }
+
+        .image_text img{
+            transform: scale(0.2);
+    
+        }
+        .image_text img.is-visible{
+            transform: scale(1);
+        
+        }
+    }
+
+    #section_Sortiment{
+        .only_image{
+            -webkit-transition: 1s ease-in-out;
+            -moz-transition: 1s ease-in-out;
+            -o-transition: 1s ease-in-out;
+            transition: 1s ease-in-out;
+        }
+        .only_image.fifty img{
+           // position: absolute;
+           // right:-1000px ;
+           // bottom: -300px
+           transform:scale(0.0)
+         
+
+        }
+        .only_image.fifty img.is-visible{
+            transform:scale(1.4)
+           
+          }
+
+          .only_image.forty img{
+           /* position: absolute;
+            left:-1000px ;
+            top: -200px; */
+            transform: scale(0.7);
+         
+
+        }
+        .only_image.forty img.is-visible{  
+            transform: scale(1) ;
+          }
+
+
+
+        .image_text img{
+            transform: scale(0.2) ;
+    
+        }
+        .image_text img.is-visible{
+            transform: scale(1)  ;
+        
+        }
+    }
+
+ 
+}
+
+#section_Weinhandel{
+    vertical-align: top;
+    .only_image{
+        //width: 60%;
+        vertical-align: top;
+    }
+    .image_text{
+        //width:30%;
+        vertical-align: top;
+    }
+}
+
+#section_Weinhandel{
+    vertical-align: top;
+    .only_image{
+        //width: 60%;
+        vertical-align: top;
+    }
+    .image_text{
+        //width:30%;
+        vertical-align: top;
+    }
+}

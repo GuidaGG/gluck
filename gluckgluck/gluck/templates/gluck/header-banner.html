@@ -1,0 +1,27 @@
+{% load static %}
+{% load random_class %}
+{% block headerbanner %}
+<div class="header-banner">
+    <div class="right_gluck">
+            <img src="{% static 'images/gluckgluck_logo_pt1.svg' %}" alt="">
+            <div class="address">Buntentorsteinweg 58 <br>
+                    28201 Bremen<br>
+                    0421. 51 42 06 57<br>
+            </div>
+            {% is_open %}
+           
+                
+
+    </div>
+    <div class="left_gluck">
+            <img src="{% static 'images/gluckgluck_logo_pt2.svg' %}" alt="">
+            <div class="title">
+                    Weinhandel am Buntentor
+                </div>
+    </div>
+   
+
+
+</div>
+
+{% endblock headerbanner %}

@@ -26,25 +26,35 @@
             {% block head_css_site %}
                 <link href="{% sass_src  "css/style.scss" %}"
                       rel="stylesheet" media="screen">
-                <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+                
 
             {% endblock head_css_site %}
             {% block head_css_section %}{% endblock head_css_section %}
             {% block head_css_page %}{% endblock head_css_page %}
+
         {% endblock head_css %}
+        {% block head_js %}
+        <script src="{% static 'js/jquery.min.js' %}"></script>  
+         <script src="{% static 'js/app.js' %}"></script>  
+        {% endblock head_js %}
     </head>
 
     <body>
+    
+         <div id= "header-banner">
+             {% include 'gluck/header-banner.html' %}
+        </div>
+        <div id="space"></div>
         <header> 
-            {% include 'header.html' %}
+            {% include 'gluck/header.html' %}
         </header>
-
+       
         <div id="site-wrapper">
             {% block content %}
 
             {% endblock content %}
         </div>
         <div class="footer">
-            {% include 'footer.html' %}
+            {% include 'gluck/footer.html' %}
         </div>
     </body>

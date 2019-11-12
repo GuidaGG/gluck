@@ -21,9 +21,15 @@ class Section(models.Model):
 
 
 class Image(models.Model):
+    IMAGE_SIZES = (
+        ('M', 'Medium'),
+        ('L', 'Large'),
+    )
+
     section_fk = models.ForeignKey(Section, on_delete=models.CASCADE, default=None)
     order = models.CharField(blank=True, null=True, max_length=10)
     image = models.ImageField(blank=True, null=True)
+    size = models.CharField(max_length=1, choices=IMAGE_SIZES, default="M")
     image_tag = models.CharField(blank=True, null=True, max_length=10)
     def __str__(self):
         return ''
@@ -48,7 +54,7 @@ class Text(models.Model):
         return ''
     
     def imaget_tag(self):
-        return mark_safe('<img src="/media/%s" width="150" height="150" />' % (self.image))
+        return mark_safe('<img src="/media/%s" width="150" height="150" />' % (self.imaget))
 
     imaget_tag.short_description = 'Image Preview'
     imaget_tag.allow_tags = True
